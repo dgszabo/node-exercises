@@ -4,7 +4,9 @@ $(document).ready(function() {
 
     $('#shuffle').click(function(){
         $.getJSON('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1', function(response) {
+            deck_id = undefined;
             deck_id = response.deck_id;
+            cardsLeft = true;
             $('#message').text('');
             $('img').fadeOut();
         });
