@@ -7,8 +7,8 @@ fs.readFile('./text.txt', (err, text) => {
             if(err) {
                 console.log('something went wrong: ', err)
             }
+            console.log(`file ${i} finished copying`)
         });
-        console.log(`file ${i} finished copying`)
     }
     console.log('copying finished!')
 });
