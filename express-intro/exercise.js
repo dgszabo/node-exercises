@@ -20,6 +20,10 @@ app.get('/phrase', function(req, res, next) {
     return res.send(req.phrase);
 });
 
+app.use((error, request, response, next) => {
+    return response.status(404).send(error);
+});
+
 app.listen(3000, function() {
     console.log('app is listening at 3000');
 });
