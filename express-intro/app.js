@@ -23,19 +23,19 @@ app.get('/calculator/:op', function(request, response, next) {
     return response.send(res.toString());
 });
 
-// app.get('/calculator/:op/:n1/:n2', function(request, response, next) {
-//     let n1 = parseInt(request.params.n1)
-//     let n2 = parseInt(request.params.n2)
+app.get('/calculator/:op/:n1/:n2', function(request, response, next) {
+    let n1 = parseInt(request.params.n1)
+    let n2 = parseInt(request.params.n2)
     
-//     let res;
+    let res;
 
-//     if(request.params.op === 'add') res = n1 + n2;
-//     if(request.params.op === 'subtract') res = n1 - n2;
-//     if(request.params.op === 'multiply') res = n1 * n2;
-//     if(request.params.op === 'divide') res = n1 / n2;
+    if(request.params.op === 'add') res = n1 + n2;
+    if(request.params.op === 'subtract') res = n1 - n2;
+    if(request.params.op === 'multiply') res = n1 * n2;
+    if(request.params.op === 'divide') res = n1 / n2;
 
-//     return response.send(res.toString());
-// });
+    return response.send(res.toString());
+});
 
 // app.get('/hello/:x', function(request, response, next) {
 //     console.log(request.params.x);
